@@ -1,0 +1,14 @@
+@font-face {
+    font-family: sevillana;
+    src: url("../fonts/Sevillana-Regular.ttf");
+}
+
+.font-sevillana-family {
+    font-family: sevillana;
+}
+
+.h3-customize {
+    color: #f48b34;
+    font-weight: 400;
+    font-size: 32px;
+}
