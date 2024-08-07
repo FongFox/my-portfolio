@@ -20,3 +20,55 @@
     font-weight: 400;
     font-style: normal;
 }
+
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Typing Animation */
+.typewriter h1 {
+    border-right: 0.15em solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #000;
+    }
+}
+
+.typewriter h1::after {
+    content: '';
+    display: inline-block;
+    width: 0.15em;
+    height: 1em;
+    background-color: #000;
+    animation: blink-caret 0.75s step-end infinite;
+}
