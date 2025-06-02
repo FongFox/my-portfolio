@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 import SocialMedia from "../social.media";
 import { useTranslation } from "react-i18next";
 import './hero.scss';
-import ResizeButton from "../resize.button";
+import ResizeButton from "../resize.button.tsx";
 import { APP_DATA } from '../../../helpers/data';
 import { MdFileDownload } from "react-icons/md";
 import { AiFillFire } from "react-icons/ai";
