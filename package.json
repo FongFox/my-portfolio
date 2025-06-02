@@ -1,11 +1,11 @@
 {
-  "name": "react-portfolio",
+  "name": "react-portfolio-hoidanit",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "author": {
-    "name": "FongFox",
-    "url": "https://github.com/FongFox"
+    "name": "Hỏi Dân IT vs Eric",
+    "url": "https://hoidanit.vn"
   },
   "scripts": {
     "dev": "vite",

@@ -1,15 +1,15 @@
 import Typewriter from "typewriter-effect";
 import SocialMedia from "components/sections/social.media";
-import {useTranslation} from "react-i18next";
-import 'components/sections/hero/hero.scss';
-import ResizeButton from "components/sections/resize.button.tsx";
-import {APP_DATA} from 'helpers/data';
-import {MdFileDownload} from "react-icons/md";
-import {AiFillFire} from "react-icons/ai";
+import { useTranslation } from "react-i18next";
+import './hero.scss';
+import ResizeButton from "components/sections/resize.button";
+import { APP_DATA } from 'helpers/data';
+import { MdFileDownload } from "react-icons/md";
+import { AiFillFire } from "react-icons/ai";
 
 const HeroLeft = () => {
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <div className='hero-left'>
@@ -19,7 +19,7 @@ const HeroLeft = () => {
                     👋🏻
                 </span>
             </h3>
-            <h3 style={{paddingTop: 10, paddingBottom: 5}}>
+            <h3 style={{ paddingTop: 10, paddingBottom: 5 }}>
                 I'M &nbsp;
                 <strong className="brand-red">{t("appHeader.brand")}</strong>
             </h3>
@@ -50,16 +50,16 @@ const HeroLeft = () => {
             <div className="d-md-flex d-none gap-4">
                 <ResizeButton
                     btnText={t("heroSection.exp")}
-                    btnIcons={<AiFillFire style={{color: "orange"}}/>}
+                    btnIcons={<AiFillFire style={{ color: "orange" }} />}
                     btnStyle={{
                         background: "unset",
                         border: "1px solid var(--border-hero-right)",
-                        color: "var(--text-white-1)"
+                        color: "var(--text-white-1)",
                     }}
                 />
                 <ResizeButton
                     btnText={t("heroSection.cv")}
-                    btnIcons={<MdFileDownload/>}
+                    btnIcons={<MdFileDownload />}
                 />
 
             </div>

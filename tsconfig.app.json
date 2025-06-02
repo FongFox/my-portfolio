@@ -22,7 +22,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    /* Path config */
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -43,9 +42,6 @@
       "styles/*": [
         "./src/styles/*"
       ],
-      "types/*": [
-        "./src/types/*"
-      ]
     }
   },
   "include": [

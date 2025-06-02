@@ -1,4 +1,4 @@
-import 'components/sections/hero/hero.scss';
+import './hero.scss';
 
 const HeroRight = () => {
 
@@ -27,23 +27,23 @@ const HeroRight = () => {
                     <div className="ms-4 me-2 text-pink-200">
                         <span className="text-white-0">skills:</span>
                         <span>{`['`}</span>
-                        <span>React</span>
+                        <span >React</span>
                         <span>{"', '"}</span>
-                        <span>Redux</span>
+                        <span >Redux</span>
                         <span>{"', '"}</span>
-                        <span>NextJS</span>
+                        <span >NextJS</span>
                         <span>{"', '"}</span>
-                        <span>Java Spring</span>
+                        <span >Java Spring</span>
                         <span>{"', '"}</span>
-                        <span>NestJS</span>
+                        <span >NestJS</span>
                         <span>{"', '"}</span>
-                        <span>NoSQL</span>
+                        <span >NoSQL</span>
                         <span>{"', '"}</span>
-                        <span>SQL</span>
+                        <span >SQL</span>
                         <span>{"', '"}</span>
-                        <span>Docker</span>
+                        <span >Docker</span>
                         <span>{"', '"}</span>
-                        <span>K8S</span>
+                        <span >K8S</span>
                         <span>{"'],"}</span>
                     </div>
                     <div>
