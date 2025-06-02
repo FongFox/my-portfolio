@@ -1,20 +1,21 @@
-
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { MdOutlineLightMode, MdNightlight } from "react-icons/md";
-import { Link, NavLink } from 'react-router-dom';
-import { useCurrentApp } from '../context/app.context';
-import { useTranslation } from 'react-i18next';
-import { NavDropdown } from 'react-bootstrap';
-import viFlag from '../../assets/svg/language/vi.svg';
-import enFlag from '../../assets/svg/language/en.svg';
+import {MdOutlineLightMode, MdNightlight} from "react-icons/md";
+import {Link, NavLink} from 'react-router-dom';
+import {useCurrentApp} from 'components/context/app.context.tsx';
+import {useTranslation} from 'react-i18next';
+import {NavDropdown} from 'react-bootstrap';
+import viFlag from 'assets/svg/language/vi.svg';
+import enFlag from 'assets/svg/language/en.svg';
+
+type ThemeContextType = "light" | "dark";
 
 function AppHeader() {
-    const { theme, setTheme } = useCurrentApp() as any;
-    const { t, i18n } = useTranslation();
+    const {theme, setTheme} = useCurrentApp();
+    const {t, i18n} = useTranslation();
 
-    const handleMode = (mode: string) => {
+    const handleMode = (mode: ThemeContextType) => {
         localStorage.setItem("theme", mode);
         document.documentElement.setAttribute('data-bs-theme', mode);
         setTheme(mode);
@@ -23,7 +24,7 @@ function AppHeader() {
     const renderFlag = (language: string) => {
         return (
             <img
-                style={{ height: 20, width: 20 }}
+                style={{height: 20, width: 20}}
                 src={language === "en" ? enFlag : viFlag} alt={language}
             />
         )
@@ -34,7 +35,7 @@ function AppHeader() {
             data-bs-theme={theme}
             expand="lg"
             className="bg-body-tertiary"
-            style={{ zIndex: 1 }}
+            style={{zIndex: 1}}
         >
             <Container>
                 <Link className="navbar-brand" to="/">
@@ -42,7 +43,7 @@ function AppHeader() {
                         {t("appHeader.brand")}
                     </span>
                 </Link>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <NavLink className="nav-link" to="/">{t("appHeader.home")}</NavLink>
@@ -50,16 +51,16 @@ function AppHeader() {
                         <NavLink className="nav-link" to="/about">{t("appHeader.about")}</NavLink>
                     </Nav>
                     <Nav className="ms-auto">
-                        <div className='nav-link' style={{ cursor: "pointer" }}>
+                        <div className='nav-link' style={{cursor: "pointer"}}>
                             {theme === "light" ?
                                 <MdOutlineLightMode
                                     onClick={() => handleMode("dark")}
-                                    style={{ fontSize: 20 }}
+                                    style={{fontSize: 20}}
                                 />
                                 :
                                 <MdNightlight
                                     onClick={() => handleMode("light")}
-                                    style={{ fontSize: 20 }}
+                                    style={{fontSize: 20}}
                                 />
                             }
                         </div>
@@ -69,9 +70,9 @@ function AppHeader() {
                         >
                             <div
                                 onClick={() => i18n.changeLanguage("en")}
-                                className='dropdown-item d-flex gap-2 align-items-center' style={{ cursor: "pointer" }}>
+                                className='dropdown-item d-flex gap-2 align-items-center' style={{cursor: "pointer"}}>
                                 <img
-                                    style={{ height: 20, width: 20 }}
+                                    style={{height: 20, width: 20}}
                                     src={enFlag} alt='english'
                                 />
                                 <span>English</span>
@@ -79,9 +80,9 @@ function AppHeader() {
                             </div>
                             <div
                                 onClick={() => i18n.changeLanguage("vi")}
-                                className='dropdown-item d-flex gap-2 align-items-center' style={{ cursor: "pointer" }}>
+                                className='dropdown-item d-flex gap-2 align-items-center' style={{cursor: "pointer"}}>
                                 <img
-                                    style={{ height: 20, width: 20 }}
+                                    style={{height: 20, width: 20}}
                                     src={viFlag} alt='vietnamese'
                                 />
                                 <span>Tiếng Việt</span>
