@@ -3,7 +3,7 @@ import SocialMedia from "components/sections/social.media.tsx";
 import {useTranslation} from "react-i18next";
 import 'components/sections/hero/hero.scss';
 import ResizeButton from "components/sections/resize.button";
-import {APP_DATA} from 'helpers/data';
+import {APP_DATA, TYPEWRITER_DATA} from 'helpers/data';
 import {MdFileDownload} from "react-icons/md";
 import {AiFillFire} from "react-icons/ai";
 
@@ -38,12 +38,7 @@ const HeroLeft = (props: IProps) => {
             </h3>
             <Typewriter
                 options={{
-                    strings: [
-                        "Software Developer",
-                        "Freelancer",
-                        "MERN Stack Developer",
-                        "Open Source Contributor",
-                    ],
+                    strings: TYPEWRITER_DATA,
                     autoStart: true,
                     loop: true,
                     deleteSpeed: 50,

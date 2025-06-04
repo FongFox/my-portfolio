@@ -5,6 +5,13 @@ import reactUltimateImg from 'assets/project/react-ultimate.png';
 import springMvcImg from 'assets/project/spring-mvc.png';
 import springRestImg from 'assets/project/spring-rest.png';
 
+export const TYPEWRITER_DATA = [
+    "Software Developer",
+    "Freelancer",
+    "MERN Stack Developer",
+    "Open Source Contributor"
+];
+
 export const APP_DATA = {
     YOUTUBE_URL: "https://www.youtube.com/@hoidanit",
     TIKTOK_URL: "https://www.tiktok.com/@hoidanit",
