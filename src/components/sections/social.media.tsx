@@ -2,7 +2,6 @@ import {FaFacebook} from "react-icons/fa6";
 import {SiUdemy} from "react-icons/si";
 import {FaTiktok} from "react-icons/fa";
 import {SiYoutubeshorts} from "react-icons/si";
-import {APP_DATA} from "helpers/data.ts";
 
 interface IProps {
     youtube: string;
