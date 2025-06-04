@@ -1,5 +1,5 @@
 import Typewriter from "typewriter-effect";
-import SocialMedia from "components/sections/social.media";
+import SocialMedia from "components/sections/social.media.tsx";
 import {useTranslation} from "react-i18next";
 import 'components/sections/hero/hero.scss';
 import ResizeButton from "components/sections/resize.button";

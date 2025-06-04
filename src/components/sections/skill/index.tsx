@@ -1,12 +1,12 @@
-import { SKILLS_DATA } from "helpers/data";
-import { skillsImage } from "helpers/skill.image";
+import {SKILLS_DATA} from "helpers/data";
+import {skillsImage} from "helpers/skill.image.ts";
 import Marquee from "react-fast-marquee";
 import './skill.scss';
-import { Col, Row } from "react-bootstrap";
-import { useTranslation } from "react-i18next";
+import {Col, Row} from "react-bootstrap";
+import {useTranslation} from "react-i18next";
 
 const Skill = () => {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     return (
         <Row className="skills-container">
             <Col xs={12} className="my-3 my-md-5">
